@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-serif: "Cinzel", Georgia, serif;
+  --font-fantasy: "Cinzel Decorative", "Cinzel", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background-color: #0c0a09;
+    color: #fef3c7;
+  }
+}
+
+/* Ancient Alchemist's Workbench Textures & Ornaments */
+.alchemist-table {
+  background-color: #0c0a09;
+  background-image: 
+    radial-gradient(ellipse at 50% 0%, rgba(217, 119, 6, 0.12) 0%, transparent 60%),
+    radial-gradient(circle at 10% 20%, rgba(180, 83, 9, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(120, 53, 15, 0.08) 0%, transparent 45%),
+    linear-gradient(to bottom, rgba(12, 10, 9, 0.94), rgba(28, 25, 23, 0.98));
+}
+
+/* Subtle alchemical wood grain / stone texture overlay */
+.alchemical-texture {
+  background-image: radial-gradient(rgba(245, 158, 11, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Ornate Gold & Bronze Inlay Borders */
+.border-alchemical-gold {
+  border-color: rgba(217, 119, 6, 0.45);
+  box-shadow: 
+    inset 0 1px 0 0 rgba(254, 240, 138, 0.15),
+    inset 0 -1px 0 0 rgba(120, 53, 15, 0.3),
+    0 4px 20px -2px rgba(0, 0, 0, 0.7);
+}
+
+.border-bronze-trim {
+  border: 1px solid rgba(180, 83, 9, 0.35);
+  background: linear-gradient(180deg, rgba(41, 37, 36, 0.85) 0%, rgba(28, 25, 23, 0.95) 100%);
+}
+
+/* Fantasy Gold Action Button */
+.btn-fantasy-gold {
+  background: linear-gradient(180deg, #F59E0B 0%, #D97706 50%, #B45309 100%);
+  border: 1px solid #FDE68A;
+  box-shadow: 
+    0 0 16px rgba(245, 158, 11, 0.35),
+    inset 0 1px 1px rgba(255, 255, 255, 0.4),
+    inset 0 -2px 4px rgba(120, 53, 15, 0.6);
+  color: #1c1917;
+  text-shadow: 0 1px 0 rgba(254, 240, 138, 0.6);
+}
+
+.btn-fantasy-gold:hover {
+  background: linear-gradient(180deg, #FBBF24 0%, #EAB308 50%, #C2410C 100%);
+  box-shadow: 
+    0 0 24px rgba(245, 158, 11, 0.55),
+    inset 0 1px 2px rgba(255, 255, 255, 0.6);
+}
+
+/* Fantasy Bronze Secondary Button */
+.btn-fantasy-bronze {
+  background: linear-gradient(180deg, rgba(68, 64, 60, 0.9) 0%, rgba(41, 37, 36, 0.95) 100%);
+  border: 1px solid rgba(217, 119, 6, 0.5);
+  box-shadow: 
+    inset 0 1px 0 rgba(254, 240, 138, 0.15),
+    0 2px 8px rgba(0, 0, 0, 0.4);
+  color: #fef3c7;
+}
+
+.btn-fantasy-bronze:hover {
+  background: linear-gradient(180deg, rgba(87, 83, 78, 0.95) 0%, rgba(57, 53, 50, 0.98) 100%);
+  border-color: rgba(245, 158, 11, 0.8);
+  box-shadow: 
+    0 0 12px rgba(217, 119, 6, 0.3),
+    inset 0 1px 1px rgba(254, 240, 138, 0.25);
+}
